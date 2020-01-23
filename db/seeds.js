@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/pycp');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pycp');
 var db = mongoose.connection;
 
 Activity = require ('../models/activityModel');
